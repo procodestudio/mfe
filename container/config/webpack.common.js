@@ -1,5 +1,6 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
+// force workflow
 module.exports = {
   module: {
     rules: [
