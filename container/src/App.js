@@ -1,11 +1,13 @@
-import React from 'react'
-import MarketingApp from './components/MarketingApp';
+import React, { lazy, Suspense } from 'react'
+const MarketingApp = lazy(() => import('./components/MarketingApp'));
 
 export default () => {
   return (
     <div>
       <h1>Hi there!</h1>
-      <MarketingApp />
+      <Suspense fallback="Loading MarketingApp...">
+        <MarketingApp />
+      </Suspense>
     </div>
   )
 }

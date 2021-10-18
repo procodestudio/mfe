@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from  'react-dom';
-import App from './App';
+const App = lazy(() => import('./App'));
 
 ReactDOM.render(
-  <App />,
+  <Suspense fallback="Loading App...">
+    <App />
+  </Suspense>,
   document.querySelector('#root'),
 );

@@ -8,6 +8,7 @@ const prodConfig = {
   output: {
     publicPath: '/marketing/latest/',
     filename: '[name].[contenthash].js',
+    library: {type: 'umd'},
   },
   plugins: [
     new ModuleFederationPlugin({
