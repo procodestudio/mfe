@@ -6,6 +6,7 @@ const packageJson = require('../package.json');
 const prodConfig = {
   mode: 'production',
   output: {
+    publicFile: '/marketing/latest/',
     filename: '[name].[contenthash].js',
   },
   plugins: [
