@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom';
-import App from './App';
+const App = lazy(() => import('./App'));
 
 const mount = (el) => {
   ReactDOM.render(
-    <App />,
+    <Suspense fallback="Loading App...">
+      <App />
+    </Suspense>,
     el,
   );
 }
