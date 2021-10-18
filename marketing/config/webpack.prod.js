@@ -8,11 +8,10 @@ const prodConfig = {
   output: {
     publicPath: '/marketing/latest/',
     filename: '[name].[contenthash].js',
-    library: {type: 'umd'},
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'marketingPlugin',
+      name: 'marketing',
       filename: 'remoteEntry.js',
       exposes: { './MarketingApp': './src/bootstrap' },
       shared: packageJson.dependencies,
